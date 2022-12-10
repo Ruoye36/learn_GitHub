@@ -1,6 +1,7 @@
 repository - warehouse. Has a .git file which is a version storage.
 commit - game save; snapshot
 working directory
+stage - temporary storage for files to commit
 
 ----- git commands to be reviewed -----
 git init
@@ -10,3 +11,4 @@ git status
 git log <--pretty=oneline>
 git reset <--hard> <HEAD^>
 git reflog
+git diff <HEAD> -- <readme.txt>
