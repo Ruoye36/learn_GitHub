@@ -9,6 +9,8 @@ git add <filename>
 git commit -m "comment"
 git status
 git log <--pretty=oneline>
-git reset <--hard> <HEAD^>
+git reset <--hard> <HEAD^>  //used to restore the last version
+git reset <HEAD> <file> //used to restore a committed change to stage (unstaging)
 git reflog
 git diff <HEAD> -- <readme.txt>
+git checkout <--> <readme.txt>
