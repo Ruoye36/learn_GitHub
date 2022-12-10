@@ -1,0 +1,12 @@
+repository - warehouse. Has a .git file which is a version storage.
+commit - game save; snapshot
+working directory
+
+----- git commands to be reviewed -----
+git init
+git add <filename>
+git commit -m "comment"
+git status
+git log <--pretty=oneline>
+git reset <--hard> <HEAD^>
+git reflog
