@@ -45,3 +45,4 @@ git stash   //stash current progress to return to a clean working tree
           list  //list stashes
           add/drop
           pop
+git rebase  //sort local unpushed commit history into a straight line to have a clean, straight history tree
