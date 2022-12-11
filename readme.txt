@@ -7,3 +7,4 @@ My boss is such a male-slut!
 
 Creating a new branch is quick & simple.
 Creating a new branch is quick AND simple.
+Learn how to manage git branches.
