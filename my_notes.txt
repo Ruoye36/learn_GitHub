@@ -17,12 +17,18 @@ git reflog
 git diff <HEAD> -- <readme.txt>
 git checkout <--> <readme.txt>
 ssh-keygen -t rsa -C "youremail@example.com"
-git remote add origin git@github.com:your_github_username/your_remote_repo_name.git
+git remote  //load remote branch info
+           -v   //same, but detailed
+           add origin git@github.com:your_github_username/your_remote_repo_name.git
            rm origin    //unbind local repo from corresponding remote repo, does not actually delete anything
 git push origin master
 git clone git@github.com:your_github_username/your_remote_repo_name.git
 git checkout -b branch_name == git switch -c dev
 git merge dev   //on local branch main, merging local branch dev
           --no-ff -m "merge with no-ff" dev //merge without fast-forward
-git branch -d branch_name
-git 
+git branch -d branch_name   //delete
+           -D branch_name   //delete by force
+git stash   //stash current progress to return to a clean working tree
+          list  //list stashes
+          add/drop
+          pop
