@@ -5,4 +5,4 @@ Git tracks changes of files.
 
 My boss is such a male-slut!
 
-Creating a new branch is quick.
+Creating a new branch is quick AND simple.
