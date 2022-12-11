@@ -5,6 +5,17 @@ stage - temporary storage for files to commit
 fast-forward - make the main pointer point to the to-be-merged branch commit directly
              - without which git creates a new commit
 BRANCH EARLY AND BRANCH OFTEN
+common branching practice: main (steady, to-be-published)
+                           dev (for development, should keep in pace with remote)
+                           bug (fix bug locally, usually not synced with remote)
+                           feature (depends on whether you and colleagues work on it together)
+if you and your colleague are working on the same file, but two different local branch corresponding to the same remote branch:
+    - git push orign <branch_name>
+        - if fails, the remote is ahead of your local.
+            - git pull to grab the newest commit from origin/dev
+            - merge locally to solve the conflict
+            - try again
+no tracking information: no connection between specified local branch and remote branch
 ----- git commands to be reviewed -----
 git init
 git add <filename>
@@ -24,10 +35,12 @@ git remote  //load remote branch info
 git push origin master
 git clone git@github.com:your_github_username/your_remote_repo_name.git
 git checkout -b branch_name == git switch -c dev
+                dev origin/dev  //create the corresponding local dev branch according to the remote origin/dev branch
 git merge dev   //on local branch main, merging local branch dev
           --no-ff -m "merge with no-ff" dev //merge without fast-forward
 git branch -d branch_name   //delete
            -D branch_name   //delete by force
+           --set-upstream-to=origin/dev dev //establish the connection between local dev branch and origin/dev branch
 git stash   //stash current progress to return to a clean working tree
           list  //list stashes
           add/drop
